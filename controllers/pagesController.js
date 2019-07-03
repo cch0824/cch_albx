@@ -1,0 +1,49 @@
+
+// 专门用来返回页面
+module.exports={
+  // -------读取前台页面-------
+  getIndexPage(req,res){
+    res.render("index")
+  },
+  getDetailPage(req,res){
+    res.render("detail")
+  },
+  getListPage(req,res){
+    res.render("list")
+  },
+  //
+  //-------读取后台页面-------
+  getAdminPage(req,res){
+    res.render("admin/index")
+  },
+  getCategoriesPage(req,res){
+    res.render("admin/categories")
+  },
+  getCommentsPage(req,res){
+    res.render("admin/comments")
+  },
+  getLoginPage(req,res){
+    res.render("admin/login")
+  },
+  getNavMenusPage(req,res){
+    res.render("admin/nav-menus")
+  },
+  getPasswordResetPage(req,res){
+    res.render("admin/password-reset")
+  },
+  getPostAddPage(req,res){
+    res.render("admin/post-add")
+  },
+  getPostsPage(req,res){
+    res.render("admin/posts")
+  },
+  getSettingsPage(req,res){
+    res.render("admin/settings")
+  },
+  getSlidesPage(req,res){
+    res.render("admin/slides")
+  },
+  getUsersPage(req,res){
+    res.render("admin/users")
+  }
+}
