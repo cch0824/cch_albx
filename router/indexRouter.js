@@ -7,6 +7,8 @@ const router=express.Router()
 //引入控制器模块
 const pagesCtrl=require("../controllers/pagesController")
 const postsCtrl=require("../controllers/postsController")
+const cateCtrl=require("../controllers/cateCtrl")
+
 //前台页面
 router.get("/",pagesCtrl.getIndexPage)
 .get("/detail",pagesCtrl.getDetailPage)
@@ -28,7 +30,11 @@ router.get("/",pagesCtrl.getIndexPage)
 // 业务处理
 //获取所有文章数据
 .get("/getPostList",postsCtrl.getPostList)
+.get("/delPostById",postsCtrl.delPostById)
 
+//获取筛选后分类数据
+.get("/getAllCateList",cateCtrl.getAllCateList)
 
+// 上传文件
 //暴露路由模块
 module.exports=router
