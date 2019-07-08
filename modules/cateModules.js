@@ -1,13 +1,5 @@
-//
-const mysql = require("mysql");
-
-var conn = mysql.createConnection({
-  host: "127.0.0.1",
-  user: "root",
-  password: "root",
-  database: "baixiu",
-  dateStrings: true
-});
+//引入模块
+let conn = require("./mysqlHelper");
 
 exports.getAllCateList = callback => {
   let sql = `select * from categories`;

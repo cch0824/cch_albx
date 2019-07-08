@@ -3,8 +3,7 @@
 let cateModules=require("../modules/cateModules")
 exports.getAllCateList=(req,res)=>{
   cateModules.getAllCateList((err,data)=>{
-    console.log(data);
-    
+    // console.log(data);
     let obj=res.query;
     if(err)return res.json({
       code:404,
@@ -17,3 +16,4 @@ exports.getAllCateList=(req,res)=>{
     })
   })
 }
+

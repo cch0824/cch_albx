@@ -98,7 +98,7 @@ $("tbody").on("click",".btnDel",function (){
     url:"/delPostById",
     data:{id:id},
     success:function(res){
-     console.log(res)
+    //  console.log(res)
     }
   })
  }

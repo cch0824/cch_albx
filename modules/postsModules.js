@@ -1,16 +1,7 @@
 // 文章页面的数据处理模块
 
-//引入mysql模块
-const mysql=require("mysql")
-
-//创建数据库的连接
-let conn=mysql.createConnection({
-  host:"127.0.0.1",
-  user:"root",
-  password:"root",
-  database:"baixiu",
-  dateStrings:true
-})
+//引入模块
+const conn=require("./mysqlHelper")
 
 // 数据的筛选
 // - 主要是判断用户有没有传入筛选的条件
@@ -61,3 +52,16 @@ exports.delPostById=(id,callback)=>{
     }
   })
 }
+
+// 新增文章
+exports.addPost=(obj,callback)=>{
+  var sql="insert into posts set ?";
+  conn.query(sql,[obj],(err)=>{
+    if(err){
+      callback(err)
+    }else{
+      callback(null)
+    }
+  })
+}
+// 根据id编辑文章
